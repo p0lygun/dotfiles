@@ -49,7 +49,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 
-sh ~/.config/screelayout.sh
+sh ~/.config/scripts/screelayout.sh
 picom &
 slstatus &
 nitrogen --restore &
