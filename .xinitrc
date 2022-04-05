@@ -53,4 +53,5 @@ sh ~/.config/scripts/screelayout.sh
 picom &
 slstatus &
 nitrogen --restore &
+xbindkeys &
 exec dwm > ~/.dwm.log
