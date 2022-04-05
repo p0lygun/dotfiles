@@ -13,10 +13,17 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+
+/* custom color scheme https://colorhunt.co/palette/151d3bd821486ebf8bdadbbd */
+static const char col_navy[]        = "#151D3B";
+static const char col_red[]        = "#D82148";
+static const char col_teal[]        = "#6EBF8B";
+static const char col_beige[]        = "#DADBBD";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_beige, col_navy, col_gray2 },
+	[SchemeSel]  = { col_red, col_navy,  col_navy  },
 };
 
 /* tagging */
@@ -29,9 +36,10 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Discord",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "rofimoji",  NULL,       NULL,       1 << 8,       1,           -1 },
+	{ "Firefox",  NULL,       NULL,       0,       0,           -1 },
+	{ "discord",  NULL,       NULL,       1<<1,       0,           -1 },
+	{ "rofimoji",  NULL,       NULL,       0,       1,           -1 },
+	{ "Psst-gui",  NULL,       NULL,       1<<1,       0,           1 },
 
 };
 
@@ -61,11 +69,12 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_navy, "-nf", col_beige, "-sb", col_navy, "-sf", col_red, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *discordcmd[]  = { "discord", NULL };
 static const char *rofimojicmd[]  = { "rofimoji", NULL };
+static const char *psstcmd[]  = { "psst-gui", NULL };
 
 
 static Key keys[] = {
@@ -110,6 +119,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask|ShiftMask, XK_d,      spawn,           {.v = discordcmd} },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,           {.v = firefoxcmd} },
 	{ MODKEY,             XK_backslash,      spawn,           {.v = rofimojicmd} },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,           {.v = psstcmd} },
 
 };
 
