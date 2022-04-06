@@ -52,6 +52,6 @@ fi
 sh ~/.config/scripts/screelayout.sh
 picom &
 slstatus &
-nitrogen --restore &
 xbindkeys &
-exec dwm > ~/.dwm.log
+feh --bg-max --randomize ~/.config/wallpapers/wallpapers/* &
+exec ~/.config/scripts/startdwm
