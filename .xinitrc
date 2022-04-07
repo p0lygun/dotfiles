@@ -54,4 +54,5 @@ picom &
 slstatus &
 xbindkeys &
 feh --bg-max --randomize ~/.config/wallpapers/wallpapers/* &
+dunst &
 exec ~/.config/scripts/startdwm
