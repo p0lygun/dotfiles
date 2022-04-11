@@ -15,3 +15,5 @@
    XF86AudioMicMute
 "flameshot gui"
    Print
+"python /home/gala/.config/scripts/switch_sink.py"
+   F8
