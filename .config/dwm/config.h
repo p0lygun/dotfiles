@@ -40,10 +40,10 @@ static const Rule rules[] = {
 	{ "discord",  NULL,       NULL,       1<<1,       0,           -1 },
 	{ "rofimoji",  NULL,       NULL,       0,       1,           -1 },
 	{ "Psst-gui",  NULL,       NULL,       1<<1,       0,           1 },
-	{ "origin.exe",  "origin.exe",      "Origin",       0,       1,           0 },
+	{ "Slack",  "slack",       NULL,       1<<1,       0,           0 },
+	{ "steam_app_1182480",  NULL,      "Origin",       0,       1,           0 },
 	{ "Steam", "Steam",      "Steam",       0,       1,           1 },
-	{ NULL, NULL,      "Battlefield V",       0,       1,           0 },
-	{ NULL, "spotify",    NULL,       1<<1,       0,           1 },
+	{ NULL, NULL,     "Battlefield™ V",       0,       1,           0 },
 
 };
 
