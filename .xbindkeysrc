@@ -1,19 +1,22 @@
 # Increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+"pactl set-sink-volume @DEFAULT_SINK@ +1000 && sigdwmblocks 2"
    XF86AudioRaiseVolume
 
 # Decrease volume
-"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+"pactl set-sink-volume @DEFAULT_SINK@ -1000 && sigdwmblocks 2"
    XF86AudioLowerVolume
 
 # Mute volume
-"pactl set-sink-mute @DEFAULT_SINK@ toggle"
+"pactl set-sink-mute @DEFAULT_SINK@ toggle && sigdwmblocks 2"
    XF86AudioMute
 
 # Mute microphone
-"pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+"pactl set-source-mute @DEFAULT_SOURCE@ toggle && sigdwmblocks 2"
    XF86AudioMicMute
 "flameshot gui"
    Print
 "python /home/gala/.config/scripts/switch_sink.py"
    F8
+"clipmenu && xdotool key shift+Insert"
+   Mod4 + c  
+
