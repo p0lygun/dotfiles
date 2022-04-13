@@ -1,7 +1,8 @@
 ## My dotfiles  
 current config  
-`dwm + slstatus + dmenu`  
+`dwm + dwmblocks + dmenu`  
 
+my dwmblocks is a fork of [ashish-yadav11/dwmblocks](https://github.com/ashish-yadav11/dwmblocks)  
 xbindkeys for key binds  
 
 Intresting Scripts in `.config/scripts`  
