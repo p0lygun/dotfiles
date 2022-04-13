@@ -51,7 +51,7 @@ fi
 
 sh ~/.config/scripts/screelayout.sh
 picom &
-slstatus &
+dwmblocks &
 xbindkeys &
 feh --bg-max --randomize ~/.config/wallpapers/wallpapers/* &
 dunst &
