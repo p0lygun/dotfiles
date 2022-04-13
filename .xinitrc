@@ -55,4 +55,7 @@ slstatus &
 xbindkeys &
 feh --bg-max --randomize ~/.config/wallpapers/wallpapers/* &
 dunst &
+clipmenud &
+noisetorch -i &
+xdotool mousemove 960  540 &
 exec ~/.config/scripts/startdwm
