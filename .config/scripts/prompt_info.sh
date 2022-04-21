@@ -1,0 +1,3 @@
+#!/bin/bash
+cols=$(($(tput cols) - 18))
+printf "%${cols}s" "$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata    | grep -Ev "^method" | grep -Eo '("(.*)")|(\b[0-9][a-zA-Z0-9.]*\b)' | sed -E '2~2 a|'| tr -d '\n'| sed -E 's/\|/\n/g'| sed -E 's/(xesam:)|(mpris:)//'| sed -E 's/^"//'| sed -E 's/"$//'| sed -E 's/"+/|/'| sed -E 's/ +/ /g' | grep -E "(title)|(artist)" | sort -r | awk -F "|" '{print $2}' | tr  '\n' ':')"
