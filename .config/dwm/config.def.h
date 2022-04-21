@@ -21,12 +21,12 @@ static const char col_teal[]        = "#6EBF8B";
 static const char col_beige[]        = "#DADBBD";
 
 /*  ashish-yadav11 / dwmblocks  patches */
-static const char col1[]            = "#ffffff";
-static const char col2[]            = "#ffffff";
-static const char col3[]            = "#ffffff";
-static const char col4[]            = "#ffffff";
-static const char col5[]            = "#ffffff";
-static const char col6[]            = "#ffffff";
+static const char green[]           = "#00FF00";
+static const char blue[]            = "#0000FF";
+static const char yellow[]          = "#FFFF00";
+static const char teal[]            = "#08D9D6";
+static const char pink[]            = "#FF2E63";
+static const char off_white[]            = "#EAEAEA";
 
 enum { SchemeNorm, SchemeCol1, SchemeCol2, SchemeCol3, SchemeCol4,
        SchemeCol5, SchemeCol6, SchemeSel }; /* color schemes */
@@ -36,13 +36,13 @@ enum { SchemeNorm, SchemeCol1, SchemeCol2, SchemeCol3, SchemeCol4,
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_beige, col_navy, col_gray2 },
-	[SchemeSel]  = { col_red, col_navy,  col_navy  },
-	[SchemeCol1]  = { col1,      col_gray1, col_gray2 },
-	[SchemeCol2]  = { col2,      col_gray1, col_gray2 },
-	[SchemeCol3]  = { col3,      col_gray1, col_gray2 },
-	[SchemeCol4]  = { col4,      col_gray1, col_gray2 },
-	[SchemeCol5]  = { col5,      col_gray1, col_gray2 },
-	[SchemeCol6]  = { col6,      col_gray1, col_gray2 },
+	[SchemeSel]  = { col_red, col_navy,  col_navy  }, //b
+	[SchemeCol1]  = { green,     col_navy, col_gray2 }, //c
+	[SchemeCol2]  = { blue,     col_navy, col_gray2 }, //d
+	[SchemeCol3]  = { yellow,     col_navy, col_gray2 },  //e
+	[SchemeCol4]  = { teal,     col_navy, col_gray2 },  //f
+	[SchemeCol5]  = { pink,     col_navy, col_gray2 }, //1b
+	[SchemeCol6]  = { off_white,     col_navy, col_gray2 }, //1d
 };
 
 /* tagging */
@@ -62,6 +62,7 @@ static const Rule rules[] = {
 	{ "Slack",  "slack",       NULL,       1<<1,       0,           0 },
 	{ "steam_app_1182480",  NULL,      "Origin",       0,       1,           0 },
 	{ "Steam", "Steam",      "Steam",       0,       1,           1 },
+	{ "jetbrains-pycharm", "jetbrains-pycharm",      NULL,       0,       0,           0 },
 	{ NULL, NULL,     "Battlefield™ V",       0,       1,           0 },
 
 };
