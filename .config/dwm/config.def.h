@@ -64,6 +64,7 @@ static const Rule rules[] = {
 	{ "Steam", "Steam",      "Steam",       0,       1,           1 },
 	{ "jetbrains-pycharm", "jetbrains-pycharm",      NULL,       0,       0,           0 },
 	{ NULL, NULL,     "Battlefield™ V",       0,       1,           0 },
+	{ NULL, NULL,     "Wine System Tray",       0,       1,           -1 },
 
 };
 
